@@ -1,0 +1,18 @@
+body {
+    font-family: Helvetica;
+    margin: 10px 4px;
+    line-height: 1.5;
+}
+
+.Title {
+    font-size: 50px;
+    font-weight: bold;
+    color: khaki;
+    background-image: url(./pattern.jpeg);
+    text-align: center;
+    height: 150px;
+}
+
+.Title h1 {
+    padding-bottom: 30px;
+}
