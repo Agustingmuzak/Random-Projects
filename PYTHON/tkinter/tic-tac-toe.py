@@ -6,11 +6,14 @@ root.title("Tic-Tac-Toe!")
 # First Horizontal row 
 
 def color_change():
-    counter = 0
-    if counter == 0:
-        btn1.config(bg='orange')
-    elif (counter % 2) == 1:
-        btn1.config(bg='blue')
+    counter = 1
+    if counter % 2 != 0:
+        btn1.config(bg='orange', text="X")
+        counter += 1
+        print(counter)
+    elif counter % 2 == 0:
+        btn1.config(bg='blue', text="O")
+        counter += 1
         
 
 
@@ -18,7 +21,8 @@ btn1 = tk.Button(root, text=" ", command=color_change)
 btn1.grid(row = 0, column= 0)
 btn1.config(width=8, height=4)
 
-btn2 = tk.Button(root, text=" ")
+
+btn2 = tk.Button(root, text=" ", command=color_change)
 btn2.grid(row = 0, column= 1)
 btn2.config(width=8, height=4)
 
