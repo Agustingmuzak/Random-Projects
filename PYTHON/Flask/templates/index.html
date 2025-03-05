@@ -1,13 +1,9 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html>
-    <head>
-        <title>This is a homepage</title>
-    </head>
+{% block head %}
+    <title>Template</title>
+{% endblock %}
 
-    <body>
-        <h1>Home Page!</h1>
-        <p>Hi! Welcome to my page {{content}}!</p>
-        <p>{{last_name}}</p>
-    </body>
-</html>
+{% block body %}
+    <h1>Hello, friends!</h1>
+{% endblock %}
