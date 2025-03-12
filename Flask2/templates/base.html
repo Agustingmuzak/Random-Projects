@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     {% block head%}
     {% endblock %}
 </head>
 
 
 <body>
-    <h1>Hello! This is a placeholder title</h1>
+    <header class="nav-header">
+        <nav>
+            <ul>
+                <h2 class="title-header"> Welcome to my store! </h2>
+                <a href="#"><li class="header-links">Guitars</li></a>
+                <a href="#"><li class="header-links">Basses</li></a>
+                <a href="#"><li class="header-links">Keyboards</li></a>
+                <a href="#"><li class="my-cart">My Cart</li></a>
+            </ul>
+        </nav>
+    </header>
     {% block body %}
     {% endblock %}
 </body>
