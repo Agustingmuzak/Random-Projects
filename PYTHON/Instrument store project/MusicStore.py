@@ -22,16 +22,22 @@ class Instrument:
     
 ### Guitar is a type of instrument, it inherits all methods from Product and Instrument, a guitar will have a brand (a.k.a: Gibson, Fender, etc) and model (a.k.a: Les Paul, Stratocaster, etc)        
 class Guitar(Instrument, Product):
-    def __init__(self, instrument_type, sub_category, brand, model, cost, price):
+    def __init__(self, instrument_type, sub_category, brand, model, cost, price, instances):
         Instrument.__init__(self, instrument_type, sub_category) 
         Product.__init__(self, cost, price)
         self.brand = brand
         self.model = model
+        instances = []
+        Guitar.instances.append(self)
+        return instances
+        
     def guitarDetail(self):
         return 'This instrument is a {} {} {} {}'.format(self.brand, self.model, self.sub_category, self.instrument_type)
     def getName(self):
         return '{} {} {} {}'.format(self.brand, self.model, self.sub_category, self.instrument_type)
-            
+
+    
+           
 
 ### A shopping cart object will store all the items selected for purchase, we will store an item price and quantity of items purchased   
 
@@ -84,10 +90,8 @@ class ShoppingCart(Guitar):
 
 shopping_cart = ShoppingCart(list(my_shopping_dict.keys()), list(my_shopping_dict.values()), list(my_shopping_dict.keys()))
 
-print(shopping_cart.getTotal())   
-
-
-
+""" print(shopping_cart.getTotal())   
+ """
 
 
     
